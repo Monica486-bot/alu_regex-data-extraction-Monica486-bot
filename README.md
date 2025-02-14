@@ -1,7 +1,3 @@
-Here’s an updated section in the README specifically detailing the **Regular Expressions** (regex) used in your script:
-
----
-
 ## Regular Expressions
 
 The script uses the following **regular expressions** to extract specific data:
