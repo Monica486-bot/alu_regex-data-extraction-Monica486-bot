@@ -3,25 +3,25 @@ import re
 
 # 1 Email Addresses
 def extract_email(outcome):
-    email_regex = r"m.ahol@alustudent.com"
+    email_regex = r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b"
     return re.findall(email_regex, outcome)
 
 
 # 2 URLS
 def extract_url(outcome):
-    url_regex = r"https://intranet.aluswe.com/projects/current"
+    url_regex = r"https?://(?:[-\w.]|(?:%[\da-fA-F]{2}))+"
     return re.findall(url_regex, outcome)
 
 
 # 3 Phone Numbers
 def extract_phone_numbers(outcome):
-    phone_numbers_regex = r"0794423393"
+    phone_numbers_regex = r"\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}"
     return re.findall(phone_numbers_regex, outcome)
 
 
 # 4 Credit Card
 def extract_credit_card(outcome):
-    credit_card_regex = r"465-687-830-270"
+    credit_card_regex = r"\b(?:\d{4}[-\s]?\d{4}[-\s]?\d{4}[-\s]?\d{4}|\d{16})\b"
     return re.findall(credit_card_regex, outcome)
 
 
